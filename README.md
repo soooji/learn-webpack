@@ -1,4 +1,4 @@
-## Learn Webpack Together
+# Learn Webpack Together
 
-# Project Description:
+## Project Description:
 It's just a sample but complete project, to learn Webpack and its potentials deeply.
