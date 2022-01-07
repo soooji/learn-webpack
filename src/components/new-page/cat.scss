@@ -1,0 +1,10 @@
+$bg: blue;
+.cat-img {
+  border-radius: 10px;
+  border: 1px solid $bg;
+
+  width: 100px;
+  height: auto;
+
+  display: block;
+}
