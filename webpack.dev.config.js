@@ -58,8 +58,6 @@ module.exports = {
       title: "Hello Webpack with HBS",
       template: "src/index.hbs",
       description: "Some application built by Webpack",
-      // meta: {
-      // },
     }),
   ],
 };

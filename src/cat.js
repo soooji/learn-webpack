@@ -1,4 +1,9 @@
-import CatImage from "./components/new-page/new-page";
+import Heading from "./components/heading/heading";
+import CatImage from "./components/cat-cmp/cat";
+import _ from "lodash";
+
+const Header = new Heading();
+Header.render(_.upperFirst("cat"));
 
 const catImg = new CatImage();
 catImg.render();

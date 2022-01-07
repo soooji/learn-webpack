@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
-    "hello-wolrd": "./src/index.js",
+    index: "./src/index.js",
     cat: "./src/cat.js",
   },
   output: {
@@ -55,11 +55,18 @@ module.exports = {
       ],
     }),
     new HTMLWebpackPlugin({
+      filename: "index.html",
       title: "Hello Webpack with HBS",
-      template: "src/index.hbs",
+      template: "src/page-template.hbs",
+      chunks: ["index"],
       description: "Some application built by Webpack",
-      // meta: {
-      // },
+    }),
+    new HTMLWebpackPlugin({
+      filename: "cat.html",
+      title: "Hello Cat",
+      template: "src/page-template.hbs",
+      chunks: ["cat"],
+      description: "A Cat",
     }),
   ],
 };
