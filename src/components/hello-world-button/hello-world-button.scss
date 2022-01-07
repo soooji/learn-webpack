@@ -1,0 +1,14 @@
+$font-size: 1rem;
+.hello-world-button {
+  border: none;
+  outline: none;
+  background: cyan;
+  color: white;
+  font-size: $font-size;
+  border-radius: 20px;
+}
+.hello-world-text {
+  margin-top: 1rem;
+  color: darkblue;
+  font-size: 0.95rem;
+}
