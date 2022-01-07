@@ -36,6 +36,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.hbs$/,
+        use: ["handlebars-loader"],
+      },
     ],
   },
   plugins: [
@@ -49,6 +53,12 @@ module.exports = {
         path.join(process.cwd(), "build/**/*"),
       ],
     }),
-    new HTMLWebpackPlugin(),
+    new HTMLWebpackPlugin({
+      title: "Hello Webpack with HBS",
+      template: "src/index.hbs",
+      description: "Some application built by Webpack",
+      // meta: {
+      // },
+    }),
   ],
 };
