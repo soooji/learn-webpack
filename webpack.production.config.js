@@ -10,9 +10,16 @@ module.exports = {
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "./dist"),
-    publicPath: "",
+    publicPath: "/static/",
   },
   mode: "production",
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 10000,
+      automaticNameDelimiter: "_",
+    },
+  },
   module: {
     rules: [
       {
@@ -58,14 +65,14 @@ module.exports = {
       filename: "index.html",
       title: "Hello Webpack with HBS",
       template: "src/page-template.hbs",
-      chunks: ["index"],
+      chunks: ["index", "872"],
       description: "Some application built by Webpack",
     }),
     new HTMLWebpackPlugin({
       filename: "cat.html",
       title: "Hello Cat",
       template: "src/page-template.hbs",
-      chunks: ["cat"],
+      chunks: ["cat", "872"],
       description: "A Cat",
     }),
   ],
